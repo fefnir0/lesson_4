@@ -1,0 +1,65 @@
+#Lists Basics
+#Definition: A list is a collection of items that:
+
+#Is ordered (items have a defined sequence).
+#Is also changeable (mutable, can be modified after creation).
+#Allows us to duplicates (same value can appear multiple times).
+
+x = ["kemal", "eren", "kuzey", "halil"]
+print(x[1])  # Output: eren (1st index is the second item)
+print(x[-1])  # Output: halil (last item using negative indexing)
+
+y = ["kemal", "eren", "kuzey", "halil", "kemal"]
+print(len(y))  # Output: 5
+#len shows the number of variables
+
+list1 = ["kemal", "eren", "kuzey"]  # Strings
+list2 = [1, 2, 3, 4]               # Integers
+list3 = [True, False, True]        # Booleans
+print(type(list3))  # Output: <class 'list'>
+#list can hold data
+
+list4 = list(("kemal", "eren", "kuzey"))
+print(list4)  # Output: ['kemal', 'eren', 'kuzey']
+
+list5 = ["kemal", "eren", "kuzey", "halil", "mete", "omer"]
+print(list5[2:5])  # Output: ['kuzey', 'halil', 'mete'] (2nd to 4th items)
+print(list5[:4])   # Output: ['kemal', 'eren', 'kuzey', 'halil'] (start to index 4)
+print(list5[2:])   # Output: ['kuzey', 'halil', 'mete', 'omer'] (from index 2 onwards)
+print(list5[-3:-1]) # Output: ['halil', 'mete'] (3rd to last to 2nd to last)
+
+if "kuzey" in list5:
+    print("yes, 'kuzey' in the list")  # Output: yes, 'kuzey' in the list
+
+list6 = ["kemal", "eren", "kuzey", "halil"]
+list6[0] = "bengisu"
+print(list6)  # Output: ['bengisu', 'eren', 'kuzey', 'halil']
+
+#replace range
+list6[1:2] = ["mustafa", "yusuf"]
+print(list6)  # Output: ['kemal', 'mustafa', 'yusuf', 'kuzey', 'halil']
+
+list6[1:4] = ["abdurahman"]
+print(list6)  # Output: ['kemal', 'abdurahman', 'halil']
+#If you replace a range with a single value, it shortens the list:
+
+list7 = ["kemal", "eren", "kuzey", "halil"]
+list7.insert(2, "abdurahman")
+print(list7)  # Output: ['kemal', 'eren', 'abdurahman', 'kuzey', 'halil']
+#inserts item into spesific place
+
+list7.append("melike")
+print(list7)  # Output: ['kemal', 'eren', 'kuzey', 'halil', 'melike']
+
+list8 = ["kemal", "eren"]
+list9 = ["banana", "orange"]
+list8.extend(list9)
+print(list8)  # Output: ['kemal', 'eren', 'banana', 'orange']
+
+mytuple = ("kiwi", "melon")
+list8.extend(mytuple)
+print(list8)  # Output: ['kemal', 'eren', 'banana', 'orange', 'kiwi', 'melon']
+
+list7 = ["kemal", "eren", "kuzey", "halil"]
+list7.remove("kemal")
+print(list7)  # Output: ['eren', 'kuzey', 'halil']
